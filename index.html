@@ -125,29 +125,31 @@
 
 
 
-  <header style="position: fixed;">
-    <div class="header-box">
-      <div class="logo">
-        <img src="/images/siverlogo.svg" alt="Logo">
-      </div>
-
-      <!-- HAMBURGER ICON -->
-      <div class="menu-icon" onclick="toggleMenu()">
-        <i class="fas fa-bars"></i>
-      </div>
-
-      <div class="navbar">
-        <ul>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#impact">Impact</a></li>
-          <li><a href="#brand">Brand</a></li>
-          <li><a href="#key">Key Engagements</a></li>
-          <li><a href="#services">Services</a></li>
-          <button class="btn"><a href="job.html" style="text-decoration: none;">Join Now</a>  </button>
-        </ul>
-      </div>
+<header style="position: fixed; width: 100%; z-index: 1000;">
+  <div class="header-box">
+    <div class="logo">
+      <img src="/images/siverlogo.svg" alt="Logo">
     </div>
-  </header>
+
+    <!-- HAMBURGER ICON -->
+    <div class="menu-icon" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <div class="navbar">
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#impact">Impact</a></li>
+        <li><a href="#brand">Brand</a></li>
+        <li><a href="#key">Key Engagements</a></li>
+        <li><a href="#services">Services</a></li>
+        <button class="btn">
+          <a href="job.html" style="text-decoration: none;">Join Now</a>
+        </button>
+      </ul>
+    </div>
+  </div>
+</header>
 
   <div class="home-page">
     <div class="scrolling-text">
@@ -772,7 +774,7 @@
 
 
 
-<div class="Contact-us" style="height: auto; background-color: #2F2A33; ">
+<div class="Contact-us" id="contact" style="height: auto; background-color: #2F2A33; ">
 
   <!-- Heading -->
   <div class="header-banner  mx-auto pt-0 pb-[20px] " >
@@ -855,13 +857,31 @@
 
 
   </div>
-  <script>
+  <!-- <script>
     function toggleMenu() {
       const navbar = document.querySelector('.navbar');
       navbar.classList.toggle('show');
     }
 
-  </script>
+  </script> -->
+
+  <script>
+  function toggleMenu() {
+    const navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('show');
+  }
+
+  // Auto hide navbar on link click
+  document.addEventListener("DOMContentLoaded", () => {
+    const navLinks = document.querySelectorAll(".navbar a");
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        const navbar = document.querySelector('.navbar');
+        navbar.classList.remove("show");
+      });
+    });
+  });
+</script>
 
   <!-- map js -->
 <script>

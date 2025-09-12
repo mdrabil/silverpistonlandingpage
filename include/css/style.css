@@ -36,6 +36,8 @@
 }
 section{
 
+  scroll-margin-top: 50px; 
+
   padding: 0px 130px;
   /* background-color: red; */
 }
@@ -449,6 +451,7 @@ padding: 10px 0px;
 .impact{
     background-color:#2F2A33;
     padding: 20px 130px 50px 130px;
+      scroll-margin-top: 30px;
 }
 
 
@@ -618,7 +621,13 @@ opacity: 0.7;
 .brand-boxes {
   padding: 30px 0 70px 0;
 }
+#brand{
+    scroll-margin-top: 50px;
+}
 
+#contact{
+    scroll-margin-top: 50px;
+}
 .brand-box {
   display: flex;
   justify-content: space-between;
@@ -1188,6 +1197,12 @@ opacity: 0.7;
   .engagements-grid {
     grid-template-columns: 1fr; /* Mobile → 1 */
   }
+
+  #brand , .impact{
+    scroll-margin-top: 70px;
+}
+
+
 }
 
 
@@ -1327,8 +1342,10 @@ opacity: 0.7;
   }
   section{
     padding: 0px;
+    scroll-margin-top:70px;
 
   }
+  #impact
       .jobs-listing,
   .joinus-next-box,
   .about-section-2 {
