@@ -233,10 +233,17 @@ padding: 40px 0;
       background: url('/images/Frame\ 1000005142\ \(2\).png') no-repeat center center/cover;
   
     }
-       .job-page {
+       /* .job-page {
       background: url('/images/jobImg.png') no-repeat center center/cover;
   
-    }
+    } */
+     .job-page {
+  background-image: url('/images/jobImg.png'), url('https://raw.githubusercontent.com/Arawebtech/images/main/JobImg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 .home-container{
   height: 100vh;
   display: flex;
@@ -261,7 +268,15 @@ padding: 40px 0;
       position: relative;
     }
     .job-page {
-      background: url('/images/jobImg.png') no-repeat center center/cover;
+      /* background: url('/images/jobImg.png') no-repeat center center/cover; */
+
+      
+  background-image: url('/images/jobImg.png'), url('https://raw.githubusercontent.com/Arawebtech/images/main/JobImg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+
       height: 100vh;
       display: flex;
       overflow: hidden;
